@@ -1,0 +1,84 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* Background and Mouse Light Effect */
+body {
+  background-color: #151821;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(140, 117, 87, 0.15),
+    transparent 50%
+  );
+  z-index: 0;
+}
+
+/* Slick Carousel Custom Styles */
+.projects-slider .slick-list {
+  overflow: visible !important;
+  z-index: 1;
+}
+
+.projects-slider .slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.projects-slider .slick-slide {
+  opacity: 0.6;
+  transform: scale(0.85);
+  transition: all 0.5s ease;
+  z-index: 1 !important;
+  pointer-events: auto;
+}
+
+.projects-slider .slick-slide.slick-center {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 100 !important;
+  pointer-events: auto;
+}
+
+.projects-slider .slick-slide > div {
+  position: relative;
+  z-index: inherit;
+}
+
+.projects-slider .slick-dots {
+  bottom: -60px;
+  z-index: 101;
+}
+
+.projects-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #48659C;
+}
+
+.projects-slider .slick-dots li.slick-active button:before {
+  color: #6B8DD6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sticky headers work properly */
+section {
+  position: relative;
+}
