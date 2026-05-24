@@ -1,11 +1,22 @@
 import { Badge } from "./ui/badge";
+import { useState } from "react";
+
+interface ExperienceLink {
+    label: string;
+    href: string;
+}
 
 interface ExperienceItemProps {
     year: string;
     role: string;
     company: string;
     description: string;
+    modalDescription: string;
+    responsibilities: string;
     skills: string[];
+    modalSkills: string[];
+    tags: string[];
+    links: ExperienceLink[];
 }
 
 interface ExperienceNewProps {
@@ -18,140 +29,185 @@ const content = {
         experiences: [
             {
                 year: "2020 — 2021",
-                role: "Bachelor in Software Development — In Progress",
-                company: "Education",
+                role: "IziRig / IziRig Suite",
+                company: "Final Graduation Project",
                 description:
-                    "Developing strong foundations in backend programming, database design, software architecture, and quality-focused workflows. Academic work emphasizes structured problem solving, debugging practices, data integrity, and collaborative development using agile principles.",
+                    "Python-based automation suite for Autodesk Maya that combined tooling, workflow optimization, " +
+                    "user validation, and internal systems development. Included auto-rigging, installation logic, " +
+                    "scene management tools, and modular extensions focused on usability and production workflows.",
+                modalDescription:
+                    "IziRig started as IziHuman, a final graduation project for the Digital Animation program at " +
+                    "Universidad Veritas and later evolved into IziRig Suite, a modular tooling ecosystem for Autodesk " +
+                    "Maya. Beyond auto-rigging, the project included automation tools, installer logic, scene management, " +
+                    "custom controllers, validation workflows, user testing, documentation, and pipeline support. The " +
+                    "focus shifted from animation into software design concepts such as modularity, workflow automation, " +
+                    "data persistence, debugging, validation, and user-oriented tooling development.",
+                responsibilities: `☉ Designed and developed the core autorig architecture and workflow automation system for Autodesk Maya.
+☉ Implemented backend logic responsible for rig generation, control creation, and configuration handling.
+☉ Built modular tooling extensions including naming systems, curve generation, and pipeline utilities.
+☉ Developed installation and startup logic using userSetup.py and Maya.env integration.
+☉ Implemented persistent configuration handling and internal data structures.
+☉ Created coordinate mapping and 2D-to-3D conversion systems using Maya API calculations.
+☉ Applied debugging, validation, and testing workflows with beta users and bug tracking.
+☉ Produced documentation, user flows, UI prototypes, and technical support materials.
+☉ Led complete product development including planning, architecture, implementation, UX, and release preparation.
+☉ Expanded the project into a modular suite focused on workflow optimization and production support.
+`,
+                tags: ["Academic", "Autodesk Maya", "Archived"],
                 skills: [
                     "Python",
-                    "Java",
-                    "SQL Server",
-                    "Git",
-                    "REST concepts",
+                    "Automation",
+                    "Maya API",
                     "Debugging",
-                    "Unit testing",
-                    "Agile (Scrum)",
-                    "Database normalization",
-                    "Client-server logic",
+                    "Tool Development",
                 ],
-            },
-            {
-                year: "2025",
-                role: "Backend & Database Project Development",
-                company: "Academic Projects",
-                description:
-                    "Designed and implemented backend-driven academic systems including authentication flows, database normalization, stored procedures, and role-based logic. Focused on validation, data consistency, and system reliability through structured testing and debugging.",
-                skills: [
-                    "SQL Server",
+                modalSkills: [
                     "Python",
-                    "Java",
-                    "REST design",
-                    "Data validation",
-                    "Database modeling",
-                    "Git",
-                    "Debugging workflows",
-                ],
-            },
-            {
-                year: "2018 — Present",
-                role: "Automation & Quality-Focused Development Practice",
-                company: "Technical Practice",
-                description:
-                    "Built automation scripts and tooling workflows emphasizing debugging, reliability, and validation. Applied testing principles to improve system stability, reduce errors, and support structured problem resolution in technical environments.",
-                skills: [
-                    "Python scripting",
+                    "Maya API",
+                    "Automation",
+                    "Tool Development",
                     "Debugging",
-                    "Test validation",
-                    "Workflow automation",
-                    "Git",
-                    "Technical documentation",
+                    "Software Testing",
+                    "Modular Architecture",
+                    "Documentation",
+                    "UI Development",
+                    "Workflow Optimization",
                 ],
-            },
-        ],
-    },
-
-    es: {
-        title: "TRAYECTORIA",
-        experiences: [
-            {
-                year: "2024 — Actualidad",
-                role: "Licenciatura en Desarrollo de Software — En curso",
-                company: "Formación académica",
-                description:
-                    "Formación sólida en programación backend, diseño de bases de datos, arquitectura de software y flujos de trabajo orientados a la calidad. Los proyectos académicos priorizan la resolución estructurada de problemas, prácticas de debugging, integridad de datos y desarrollo colaborativo bajo metodologías ágiles.",
-                skills: [
-                    "Python",
-                    "Java",
-                    "SQL Server",
-                    "Git",
-                    "Conceptos REST",
-                    "Debugging",
-                    "Pruebas unitarias",
-                    "Agile (Scrum)",
-                    "Normalización de bases de datos",
-                    "Lógica cliente-servidor",
-                ],
-            },
-            {
-                year: "2025",
-                role: "Desarrollo de Proyectos Backend y Bases de Datos",
-                company: "Proyectos académicos",
-                description:
-                    "Diseño e implementación de sistemas académicos orientados a backend, incluyendo flujos de autenticación, normalización de bases de datos, procedimientos almacenados y control de roles. Se priorizó la validación, consistencia de datos y confiabilidad mediante pruebas estructuradas y debugging.",
-                skills: [
-                    "SQL Server",
-                    "Python",
-                    "Java",
-                    "Diseño REST",
-                    "Validación de datos",
-                    "Modelado de bases de datos",
-                    "Git",
-                    "Debugging",
-                ],
-            },
-            {
-                year: "2018 — Actualidad",
-                role: "Práctica de Automatización y Desarrollo Enfocado en Calidad",
-                company: "Práctica técnica",
-                description:
-                    "Desarrollo de scripts de automatización y flujos técnicos priorizando debugging, confiabilidad y validación. Aplicación de principios de testing para mejorar la estabilidad del sistema, reducir errores y estructurar la resolución de problemas.",
-                skills: [
-                    "Scripting en Python",
-                    "Debugging",
-                    "Validación de pruebas",
-                    "Automatización de flujos",
-                    "Git",
-                    "Documentación técnica",
+                links: [
+                    { label: "Project Page", href: "/izirig" },
+                    { label: "GitHub", href: "https://github.com/BetoxPrograming/izirig-suite" },
+                    { label: "YouTube", href: "https://www.youtube.com/@izirig5583" },
                 ],
             },
         ],
     },
 } as const;
 
-function ExperienceItem({ year, role, company, description, skills }: ExperienceItemProps) {
+function ExperienceItem({
+                            year,
+                            role,
+                            company,
+                            description,
+                            modalDescription,
+                            responsibilities,
+                            skills,
+                            modalSkills,
+                            tags,
+                            links,
+                        }: ExperienceItemProps) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 lg:gap-8 group mb-12 p-6 -mx-6 rounded-lg hover:bg-white/5 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <div className="text-[14px] text-gray-400 uppercase tracking-wide">{year}</div>
+        <>
+            <button
+                type="button"
+                onClick={() => setIsOpen(true)}
+                className="w-full text-left grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 lg:gap-8 group mb-12 p-6 -mx-6 rounded-lg hover:bg-white/5 hover:shadow-lg transition-all duration-300 cursor-pointer"
+            >
+                <div className="text-[14px] text-gray-400 uppercase tracking-wide">{year}</div>
 
-            <div>
-                <h3 className="text-[17px] font-bold text-white mb-3">
-                    {role} · {company}
-                </h3>
+                <div>
+                    <h3 className="text-[17px] font-bold text-white mb-3">
+                        {role} · {company}
+                    </h3>
 
-                <p className="text-[17px] text-gray-300 leading-relaxed mb-4">{description}</p>
+                    <p className="text-[17px] text-gray-300 leading-relaxed mb-4">{description}</p>
 
-                <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
-                        <Badge
-                            key={index}
-                            className="bg-[#48659C] bg-opacity-40 text-white border-0 hover:bg-[#5a7ab8] transition-colors"
-                        >
-                            {skill}
-                        </Badge>
-                    ))}
+                    <div className="flex flex-wrap gap-2">
+                        {skills.map((skill, index) => (
+                            <Badge
+                                key={index}
+                                className="bg-[#48659C] bg-opacity-40 text-white border-0 hover:bg-[#5a7ab8] transition-colors"
+                            >
+                                {skill}
+                            </Badge>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </div>
+            </button>
+
+            {isOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md px-6"
+                    onClick={() => setIsOpen(false)}
+                >
+                    <div
+                        className="w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#13131A]/75 p-8 shadow-2xl"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 lg:gap-8">
+                            <div className="text-[14px] text-gray-400 uppercase tracking-wide">
+                                {year}
+                            </div>
+
+                            <div className="lg:pr-[100px]">
+                                <div className="flex justify-between gap-6 mb-4">
+                                    <div>
+                                        <h3 className="text-[22px] font-bold text-white mb-2">
+                                            {role}
+                                        </h3>
+                                        <p className="text-gray-400">{company}</p>
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-gray-400 hover:text-white text-2xl leading-none"
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {tags.map((tag, index) => (
+                                        <Badge
+                                            key={index}
+                                            className="bg-white/10 text-white border-0"
+                                        >
+                                            {tag}
+                                        </Badge>
+                                    ))}
+                                </div>
+
+                                <p className="text-[17px] text-gray-300 leading-relaxed mb-6">
+                                    {modalDescription}
+                                </p>
+
+                                <p className="text-[16px] text-gray-300 leading-relaxed mb-6 whitespace-pre-line">
+                                    {responsibilities}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {modalSkills.map((skill, index) => (
+                                        <Badge
+                                            key={index}
+                                            className="bg-white/10 text-white border-0"
+                                        >
+                                            {skill}
+                                        </Badge>
+                                    ))}
+                                </div>
+
+                                <h4 className="text-white font-bold mb-3">Links</h4>
+                                <div className="flex flex-wrap gap-5">
+                                    {links.map((link, index) => (
+                                        <a
+                                            key={index}
+                                            href={link.href}
+                                            target={link.href.indexOf("http") === 0 ? "_blank" : "_self"}
+                                            rel="noopener noreferrer"
+                                            className="text-white hover:text-[#6B8DD6] transition-colors border-b border-white/30 hover:border-[#6B8DD6]"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 }
 
