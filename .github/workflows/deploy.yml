@@ -33,5 +33,5 @@ jobs:
 
       - name: Deploy dist
         run: |
-          scp -P ${{ secrets.NAMECHEAP_PORT }} -r dist/* \
-          ${{ secrets.NAMECHEAP_USER }}@${{ secrets.NAMECHEAP_HOST }}:~/public_html/
+          scp -P ${{ secrets.NAMECHEAP_PORT }} -r dist/. \
+            ${{ secrets.NAMECHEAP_USER }}@${{ secrets.NAMECHEAP_HOST }}:~/public_html/
