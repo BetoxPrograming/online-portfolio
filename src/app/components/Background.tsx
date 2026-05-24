@@ -1,99 +1,195 @@
-import { Briefcase, Calendar } from 'lucide-react';
-import { Badge } from './ui/badge';
+import { Badge } from "./ui/badge";
 
 interface ExperienceItemProps {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-  tools: string[];
+    year: string;
+    role: string;
+    company: string;
+    description: string;
+    skills: string[];
 }
 
-function ExperienceItem({ title, company, period, description, tools }: ExperienceItemProps) {
-
-  return (
-    <div className="relative pl-8 pb-12 last:pb-0">
-      {/* Timeline line */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-500 bg-opacity-30 last:hidden"></div>
-      
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-2 w-4 h-4 -ml-[7px] bg-[#48659C] rounded-full border-4 border-[#344970] shadow-md"></div>
-      
-      <div className="bg-[#3d5378] bg-opacity-40 p-6 shadow-md hover:shadow-xl transition-shadow backdrop-blur-sm">
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-          <div>
-            <h3 className="text-xl mb-1 text-white">{title}</h3>
-            <p className="text-[#6B8DD6] font-medium">{company}</p>
-          </div>
-          <div className="flex items-center gap-2 text-gray-300">
-            <Calendar className="w-4 h-4" />
-            <span className="text-sm">{period}</span>
-          </div>
-        </div>
-        
-        <p className="text-gray-300 mb-4">{description}</p>
-        
-        <div className="flex flex-wrap gap-2">
-          {tools.map((tool, index) => (
-            <Badge key={index} variant="secondary" className="bg-[#48659C] bg-opacity-30 text-[#6B8DD6] hover:bg-[#48659C] hover:bg-opacity-50 border-0">
-              {tool}
-            </Badge>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+interface ExperienceNewProps {
+    lang?: "en" | "es";
 }
 
-export function Background() {
-  const experiences = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "Tech Company Inc.",
-      period: "2023 - Presente",
-      description: "Liderazgo técnico en el desarrollo de aplicaciones web escalables. Diseño e implementación de arquitecturas serverless y microservicios.",
-      tools: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL", "Docker"]
+const content = {
+    en: {
+        title: "BACKGROUND",
+        experiences: [
+            {
+                year: "2020 — 2021",
+                role: "Bachelor in Software Development — In Progress",
+                company: "Education",
+                description:
+                    "Developing strong foundations in backend programming, database design, software architecture, and quality-focused workflows. Academic work emphasizes structured problem solving, debugging practices, data integrity, and collaborative development using agile principles.",
+                skills: [
+                    "Python",
+                    "Java",
+                    "SQL Server",
+                    "Git",
+                    "REST concepts",
+                    "Debugging",
+                    "Unit testing",
+                    "Agile (Scrum)",
+                    "Database normalization",
+                    "Client-server logic",
+                ],
+            },
+            {
+                year: "2025",
+                role: "Backend & Database Project Development",
+                company: "Academic Projects",
+                description:
+                    "Designed and implemented backend-driven academic systems including authentication flows, database normalization, stored procedures, and role-based logic. Focused on validation, data consistency, and system reliability through structured testing and debugging.",
+                skills: [
+                    "SQL Server",
+                    "Python",
+                    "Java",
+                    "REST design",
+                    "Data validation",
+                    "Database modeling",
+                    "Git",
+                    "Debugging workflows",
+                ],
+            },
+            {
+                year: "2018 — Present",
+                role: "Automation & Quality-Focused Development Practice",
+                company: "Technical Practice",
+                description:
+                    "Built automation scripts and tooling workflows emphasizing debugging, reliability, and validation. Applied testing principles to improve system stability, reduce errors, and support structured problem resolution in technical environments.",
+                skills: [
+                    "Python scripting",
+                    "Debugging",
+                    "Test validation",
+                    "Workflow automation",
+                    "Git",
+                    "Technical documentation",
+                ],
+            },
+        ],
     },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Solutions",
-      period: "2021 - 2023",
-      description: "Desarrollo de aplicaciones web full-stack. Implementación de APIs RESTful y optimización de rendimiento de bases de datos.",
-      tools: ["React", "Express", "MongoDB", "Redux", "Tailwind CSS"]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Startup Innovadora",
-      period: "2019 - 2021",
-      description: "Creación de interfaces de usuario modernas y responsivas. Colaboración con equipos de diseño para implementar experiencias fluidas.",
-      tools: ["React", "Vue.js", "JavaScript", "SASS", "Figma"]
-    },
-    {
-      title: "Junior Developer",
-      company: "Software Agency",
-      period: "2018 - 2019",
-      description: "Desarrollo y mantenimiento de sitios web corporativos. Aprendizaje continuo de tecnologías web modernas y mejores prácticas.",
-      tools: ["HTML", "CSS", "JavaScript", "jQuery", "PHP"]
-    }
-  ];
 
-  return (
-    <section id="experience" className="min-h-screen px-6 py-20 relative z-10">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <Briefcase className="w-8 h-8 text-[#6B8DD6]" />
-            <h2 className="text-4xl text-white">Experiencia Profesional</h2>
-          </div>
-          <p className="text-gray-300 text-lg">Mi trayectoria profesional y las tecnologías con las que he trabajado</p>
-        </div>
+    es: {
+        title: "TRAYECTORIA",
+        experiences: [
+            {
+                year: "2024 — Actualidad",
+                role: "Licenciatura en Desarrollo de Software — En curso",
+                company: "Formación académica",
+                description:
+                    "Formación sólida en programación backend, diseño de bases de datos, arquitectura de software y flujos de trabajo orientados a la calidad. Los proyectos académicos priorizan la resolución estructurada de problemas, prácticas de debugging, integridad de datos y desarrollo colaborativo bajo metodologías ágiles.",
+                skills: [
+                    "Python",
+                    "Java",
+                    "SQL Server",
+                    "Git",
+                    "Conceptos REST",
+                    "Debugging",
+                    "Pruebas unitarias",
+                    "Agile (Scrum)",
+                    "Normalización de bases de datos",
+                    "Lógica cliente-servidor",
+                ],
+            },
+            {
+                year: "2025",
+                role: "Desarrollo de Proyectos Backend y Bases de Datos",
+                company: "Proyectos académicos",
+                description:
+                    "Diseño e implementación de sistemas académicos orientados a backend, incluyendo flujos de autenticación, normalización de bases de datos, procedimientos almacenados y control de roles. Se priorizó la validación, consistencia de datos y confiabilidad mediante pruebas estructuradas y debugging.",
+                skills: [
+                    "SQL Server",
+                    "Python",
+                    "Java",
+                    "Diseño REST",
+                    "Validación de datos",
+                    "Modelado de bases de datos",
+                    "Git",
+                    "Debugging",
+                ],
+            },
+            {
+                year: "2018 — Actualidad",
+                role: "Práctica de Automatización y Desarrollo Enfocado en Calidad",
+                company: "Práctica técnica",
+                description:
+                    "Desarrollo de scripts de automatización y flujos técnicos priorizando debugging, confiabilidad y validación. Aplicación de principios de testing para mejorar la estabilidad del sistema, reducir errores y estructurar la resolución de problemas.",
+                skills: [
+                    "Scripting en Python",
+                    "Debugging",
+                    "Validación de pruebas",
+                    "Automatización de flujos",
+                    "Git",
+                    "Documentación técnica",
+                ],
+            },
+        ],
+    },
+} as const;
 
-        <div className="relative">
-          {experiences.map((exp, index) => (
-            <ExperienceItem key={index} {...exp} />
-          ))}
+function ExperienceItem({ year, role, company, description, skills }: ExperienceItemProps) {
+    return (
+        <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 lg:gap-8 group mb-12 p-6 -mx-6 rounded-lg hover:bg-white/5 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <div className="text-[14px] text-gray-400 uppercase tracking-wide">{year}</div>
+
+            <div>
+                <h3 className="text-[17px] font-bold text-white mb-3">
+                    {role} · {company}
+                </h3>
+
+                <p className="text-[17px] text-gray-300 leading-relaxed mb-4">{description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                    {skills.map((skill, index) => (
+                        <Badge
+                            key={index}
+                            className="bg-[#48659C] bg-opacity-40 text-white border-0 hover:bg-[#5a7ab8] transition-colors"
+                        >
+                            {skill}
+                        </Badge>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-  );
+    );
+}
+
+export function Background({ lang = "en" }: ExperienceNewProps) {
+    const t = content[lang];
+    const experiences = t.experiences;
+
+    return (
+        <section id="experience" className="min-h-screen py-20 px-6 lg:px-12 relative z-10">
+            <h2 className="text-[22px]
+            font-bold
+            text-white
+            mb-12 lg:hidden
+            sticky top-0 z-40
+            bg-transparent
+            backdrop-blur-lg
+            py-4 -mx-6 px-6">
+
+
+                {t.title}
+            </h2>
+
+            <div className="max-w-4xl">
+                {experiences.map((exp, index) => (
+                    <ExperienceItem key={index} {...exp} />
+                ))}
+
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-[20px] text-white hover:text-[#6B8DD6] transition-colors mt-8 group"
+                >
+          <span className="border-b-2 border-transparent group-hover:border-[#6B8DD6] transition-all">
+            View Full Resume →
+          </span>
+                </a>
+            </div>
+        </section>
+    );
 }

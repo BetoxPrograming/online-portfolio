@@ -1,7 +1,7 @@
 import { HeroSectionSidebar } from './components/HeroSectionSidebar';
 import { HeroSectionMobile } from './components/HeroSectionMobile';
 import { About } from './components/About';
-import { BackgroundNew } from './components/BackgroundNew';
+import { Background } from './components/Background';
 import { Projects } from './components/Projects';
 import { MouseLightEffect } from './components/MouseLightEffect';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -57,7 +57,7 @@ export default function App() {
                 <div className="w-full max-w-[880px] mx-auto px-6 lg:px-12">
                     <main>
                         <About lang={lang} />
-                        <BackgroundNew lang={lang} />
+                        <Background lang={lang} />
                         <Projects lang={lang} />
                     </main>
                 </div>
