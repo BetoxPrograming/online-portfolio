@@ -97,7 +97,7 @@ function ExperienceItem({
                         }: ExperienceItemProps) {
     const [isOpen, setIsOpen] = useState(() => {
         const params = new URLSearchParams(window.location.search);
-        return params.get("openProject") === "izirig" && role.includes("IziRig");
+        return params.get("openProject") === "izirig" && role.indexOf("IziRig") !== -1;
     });
 
     return (
