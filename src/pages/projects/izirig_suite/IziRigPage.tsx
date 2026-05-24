@@ -8,7 +8,7 @@ export default function IziRigPage() {
                 <h1>{izirigNotice.title}</h1>
                 <p>{izirigNotice.body}</p>
 
-                <a className="izirig-back-button" href="/">
+                <a className="izirig-back-button" href="/?openProject=izirig#experience">
                     ← Back to portfolio
                 </a>
             </section>
@@ -160,6 +160,13 @@ export default function IziRigPage() {
                     </form>
                 </section>
             </div>
+
+            <footer className="izirig-footer">
+                <a className="izirig-back-button" href="/?openProject=izirig#experience">
+                    ← Back to portfolio
+                </a>
+            </footer>
+
         </main>
     );
 }
