@@ -5,9 +5,9 @@ interface AboutProps {
 export function About({lang}: AboutProps) {
   const content = {
     en: {
-      p1: "I’m focused on building backend-driven software with a strong quality mindset. My work centers on writing clear logic, validating behavior through testing, and improving reliability through structured debugging and documentation.",
-      p2: "Through academic and freelance projects, I’ve developed automation scripts, database systems, and client-server applications that emphasize correctness, maintainability, and practical problem solving.",
-      p3: "I’m continuously strengthening my backend and testing skills while contributing to real-world style projects — aiming to grow within teams that value clarity, learning, and software quality.",
+      p1: "Advanced Software Development student focused on backend, QA, and security. I bring fast learning, attention to detail, analytical thinking, creativity, initiative, and a quality-driven mindset.",
+      p2: "I am building a technical foundation for backend, QA, and entry-level technology roles through programming, databases, Git, system design, documentation, and academic software projects.",
+      p3: "I am looking for an internship or entry-level opportunity where I can contribute structure, teamwork, customer-oriented thinking, and continuous improvement while growing as a software developer.",
     },
     es: {
       p1: "Me enfoco en construir software orientado a backend con una mentalidad fuerte de calidad. Mi trabajo se centra en escribir lógica clara, validar el comportamiento con pruebas y mejorar la confiabilidad mediante debugging y documentación estructurada.",

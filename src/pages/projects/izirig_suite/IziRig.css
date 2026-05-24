@@ -1,0 +1,413 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+.izirig-wrapper {
+    min-height: 100vh;
+    padding: 48px 24px;
+    background: #151821;
+    font-family: "Montserrat", sans-serif;
+}
+
+.izirig-project-notice {
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 28px 32px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 22px;;
+    color: #e5e7eb;
+}
+
+.izirig-project-notice h1 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.izirig-project-notice p {
+    margin: 0;
+    max-width: 980px;
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.izirig-back-button {
+    display: inline-flex;
+    margin-top: 20px;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.izirig-back-button:hover {
+    text-decoration: underline;
+}
+
+.izirig-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: #ffffff;
+}
+
+.izirig-navbar {
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 30px;
+    background: #ffffff;
+}
+
+.izirig-logo-link {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+}
+
+.izirig-logo {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.izirig-navlinks {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.izirig-navlinks a {
+    color: #1a1b1f;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.izirig-hero {
+    min-height: 474px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #12191d;
+    background-image: url("./assets/images/web_banner.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.izirig-hero h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: 0.05em;
+}
+
+.izirig-hero p {
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+.izirig-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: 0;
+    border-radius: 0;
+    background: #1a1b1f;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.izirig-button-light {
+    margin-top: 32px;
+    background: #ffffff;
+    color: #1a1b1f;
+}
+
+.izirig-label {
+    margin: 0;
+    color: rgba(26, 27, 31, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.izirig-store-section {
+    min-height: 300px;
+    padding: 80px 30px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.izirig-store-section h2 {
+    margin: 14px 0 0;
+    color: #1a1b1f;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.izirig-content-section {
+    display: grid;
+    gap: 70px;
+    align-items: center;
+    padding: 52px 30px;
+    background: #ffffff;
+}
+
+.izirig-about,
+.izirig-sculpting {
+    grid-template-columns: 0.9fr 1.55fr;
+}
+
+.izirig-gaming {
+    grid-template-columns: 1.55fr 0.9fr;
+}
+
+.izirig-text-block h2 {
+    margin: 14px 0 24px;
+    color: #1a1b1f;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.izirig-text-block p {
+    margin: 0 0 24px;
+    color: rgba(26, 27, 31, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.izirig-media-block {
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    background: #d8d8d8;
+}
+
+.izirig-media-block iframe {
+    width: 100%;
+    height: 360px;
+    display: block;
+    border: 0;
+}
+
+.izirig-media-block img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+.izirig-help-section {
+    padding: 70px 30px 60px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.izirig-help-section h2 {
+    margin: 14px 0 42px;
+    color: #1a1b1f;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.izirig-help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.izirig-help-grid h3 {
+    margin: 0;
+    color: #1a1b1f;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+.izirig-beta-section {
+    min-height: 520px;
+    padding: 96px 30px;
+    background: #1a1b1f;
+    text-align: center;
+}
+
+.izirig-beta-section h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.izirig-beta-section p {
+    margin: 20px 0 34px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+.izirig-beta-section form {
+    max-width: 460px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+}
+
+.izirig-beta-section label {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.izirig-beta-section input {
+    height: 35px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+    color: #1a1b1f;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.izirig-beta-section button {
+    justify-self: center;
+    margin-top: 0;
+    padding: 10px 18px;
+    border: 0;
+    background: #b3b3b3;
+    color: #1a1b1f;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .izirig-wrapper {
+        padding: 0;
+    }
+
+    .izirig-project-notice {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .izirig-page {
+        border: 0;
+    }
+
+    .izirig-navbar {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px 30px;
+    }
+
+    .izirig-logo-link {
+        justify-self: center;
+    }
+
+    .izirig-navlinks {
+        grid-column: 1;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .izirig-hero {
+        min-height: 420px;
+    }
+
+    .izirig-hero h2 {
+        font-size: 46px;
+        line-height: 60px;
+    }
+
+    .izirig-store-section h2,
+    .izirig-text-block h2,
+    .izirig-help-section h2,
+    .izirig-beta-section h2 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .izirig-about,
+    .izirig-gaming,
+    .izirig-sculpting {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .izirig-gaming .izirig-media-block {
+        order: 2;
+    }
+
+    .izirig-gaming .izirig-text-block {
+        order: 1;
+    }
+
+    .izirig-help-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .izirig-media-block iframe {
+        height: 260px;
+    }
+}

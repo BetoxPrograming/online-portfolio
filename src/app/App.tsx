@@ -10,11 +10,11 @@ import { useState } from "react";
 
 export default function App() {
 
-        const [lang, setLang] = useState<"en" | "es">("en");
+    const [lang, setLang] = useState<"en" | "es">("en");
 
-        const toggleLanguage = () => {
-            setLang(prev => (prev === "en" ? "es" : "en"));
-        };
+    const toggleLanguage = () => {
+        setLang(prev => (prev === "en" ? "es" : "en"));
+    };
 
     return (
         <div className="min-h-screen">
