@@ -1,5 +1,5 @@
 import { Badge } from "./ui/badge";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ExperienceLink {
     label: string;
@@ -99,6 +99,19 @@ function ExperienceItem({
         const params = new URLSearchParams(window.location.search);
         return params.get("openProject") === "izirig" && role.indexOf("IziRig") !== -1;
     });
+
+    // Prevents the background page from scrolling while the modal is open.
+    // Restores the original body overflow value when the modal closes.
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = originalOverflow;
+        };
+    }, [isOpen]);
 
     return (
         <>
