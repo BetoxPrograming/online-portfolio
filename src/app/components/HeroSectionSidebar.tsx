@@ -92,14 +92,6 @@ export function HeroSectionSidebar({lang}: HeroSectionSidebarProps) {
               {t.p4}
             </span>
                     </button>
-                    <button
-                        onClick={() => scrollToSection('projects')}
-                        className="block text-gray-400 hover:text-white transition-colors text-left group"
-                    >
-            <span className="inline-block border-b-2 border-transparent group-hover:border-white transition-all">
-              {t.p5}
-            </span>
-                    </button>
                 </nav>
             </div>
 

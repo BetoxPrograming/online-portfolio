@@ -2,7 +2,6 @@ import { HeroSectionSidebar } from './components/HeroSectionSidebar';
 import { HeroSectionMobile } from './components/HeroSectionMobile';
 import { About } from './components/About';
 import { Background } from './components/Background';
-import { Projects } from './components/Projects';
 import { MouseLightEffect } from './components/MouseLightEffect';
 import { ScrollToTop } from './components/ScrollToTop';
 import { useState } from "react";
@@ -58,7 +57,6 @@ export default function App() {
                     <main>
                         <About lang={lang} />
                         <Background lang={lang} />
-                        <Projects lang={lang} />
                     </main>
                 </div>
 
