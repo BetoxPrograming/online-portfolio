@@ -238,16 +238,6 @@ export function Background({ lang = "en" }: ExperienceNewProps) {
                     <ExperienceItem key={index} {...exp} />
                 ))}
 
-                <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-[20px] text-white hover:text-[#6B8DD6] transition-colors mt-8 group"
-                >
-          <span className="border-b-2 border-transparent group-hover:border-[#6B8DD6] transition-all">
-            View Full Resume →
-          </span>
-                </a>
             </div>
         </section>
     );
