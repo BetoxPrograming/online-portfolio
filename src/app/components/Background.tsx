@@ -135,7 +135,7 @@ function ExperienceItem({
                     onClick={() => setIsOpen(false)}
                 >
                     <div
-                        className="w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#13131A]/75 p-8 shadow-2xl"
+                        className="w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#13131A]/75 pt-8 px-8 pb-[80px] shadow-2xl"
                         onClick={(event) => event.stopPropagation()}
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 lg:gap-8">
