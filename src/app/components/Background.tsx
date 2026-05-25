@@ -1,5 +1,6 @@
 import { Badge } from "./ui/badge";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 interface ExperienceLink {
     label: string;
@@ -129,7 +130,7 @@ function ExperienceItem({
                 </div>
             </button>
 
-            {isOpen && (
+            {isOpen && createPortal(
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md px-6"
                     onClick={() => setIsOpen(false)}
@@ -208,7 +209,8 @@ function ExperienceItem({
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
