@@ -28,6 +28,74 @@ const content = {
         title: "BACKGROUND",
         experiences: [
             {
+                year: "2025",
+                role: "Waste Management Platform",
+                company: "Academic Completed",
+                description:
+                    "Web platform for waste report management with user system, image uploads, geolocation, " +
+                    "rankings and educational modules. Includes backend logic, database integration, deployment " +
+                    "fixes and production debugging.",
+
+                modalDescription:
+                    "Academic web platform focused on waste management and environmental awareness. The system " +
+                    "allows user registration, report creation, image uploads, map visualization, educational " +
+                    "content and community participation. The project evolved beyond the original academic scope " +
+                    "by adding deployment adjustments, production debugging and improved demo navigation using " +
+                    "generic datasets.",
+
+                responsibilities: `
+☉ Designed and implemented backend functionality using PHP and MySQL.
+☉ Developed user management, report handling, image management and database interaction modules.
+☉ Implemented CRUD operations and database connectivity features.
+☉ Performed deployment configuration and production debugging after migration to Namecheap hosting.
+☉ Refactored backend components to improve maintainability and project organization.
+☉ Fixed environment-specific issues appearing only in production environments.
+☉ Resolved bugs related to profile images, report images and map icon visualization.
+☉ Improved demo datasets and navigation flows to create a better testing experience.
+☉ Produced technical documentation including README, setup guides and database notes.
+☉ Supported validation, debugging and project stabilization activities.
+`,
+
+                tags: [
+                    "Academic",
+                    "Completed",
+                    "Backend",
+                    "Deployed",
+                ],
+
+                skills: [
+                    "PHP",
+                    "MySQL",
+                    "Backend Development",
+                    "Debugging",
+                    "Deployment",
+                ],
+
+                modalSkills: [
+                    "PHP",
+                    "MySQL",
+                    "CRUD",
+                    "Database Design",
+                    "Debugging",
+                    "Production Troubleshooting",
+                    "Deployment",
+                    "Image Handling",
+                    "Technical Documentation",
+                    "QA Mindset",
+                ],
+
+                links: [
+                    {
+                        label: "GitHub",
+                        href: "https://github.com/BetoxPrograming/waste-management",
+                    },
+                    {
+                        label: "Demo",
+                        href: "https://wastemanagement.betoxprograming.com/",
+                    },
+                ],
+            },
+            {
                 year: "2020 — 2021",
                 role: "IziRig / IziRig Suite",
                 company: "Final Graduation Project",
