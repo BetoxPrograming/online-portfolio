@@ -156,6 +156,65 @@ const content = {
             },
             {
                 year: "2024",
+                role: "Parking Management System",
+                company: "Academic Completed",
+
+                description:
+                    "Academic parking management system developed to apply data structures concepts through " +
+                    "vehicle registration, zone management, parking flow control and operational interfaces " +
+                    "within a desktop environment.",
+
+                modalDescription:
+                    "Academic desktop project developed for the Data Structures course. The objective was not " +
+                    "data persistence but the practical application of structures through a parking management " +
+                    "system. The project includes vehicle registration, parking zones, operational flows and " +
+                    "interface interaction. It served as a practical environment to apply linked lists and " +
+                    "other structures while organizing system logic and user workflows.",
+
+                responsibilities: `
+☉ Designed and developed the complete desktop application structure and interface flow.
+☉ Implemented parking registration and vehicle management workflows.
+☉ Applied data structures concepts within system modules and operations.
+☉ Built interfaces for vehicle entry, exit, zone handling and operational views.
+☉ Organized project architecture and internal logic distribution.
+☉ Integrated object-oriented programming concepts into the application structure.
+☉ Refactored and corrected broken components during development.
+☉ Performed debugging and validation during implementation.
+☉ Produced project documentation and academic deliverables.
+☉ Adapted the implementation to course scope where persistence was not required.
+`,
+
+                tags: [
+                    "Academic",
+                    "Completed",
+                    "Data Structures",
+                ],
+
+                skills: [
+                    "Java",
+                    "Data Structures",
+                    "OOP",
+                    "Debugging",
+                    "Desktop Development",
+                ],
+
+                modalSkills: [
+                    "Java",
+                    "Data Structures",
+                    "Linked Lists",
+                    "OOP",
+                    "Swing UI",
+                    "Debugging",
+                    "Refactoring",
+                    "Validation",
+                    "Desktop Development",
+                    "Documentation",
+                ],
+
+                links: [],
+            },
+            {
+                year: "2024",
                 role: "Ubuntu Server Security Lab",
                 company: "Academic Completed",
 
