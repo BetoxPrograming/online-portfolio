@@ -29,6 +29,65 @@ const content = {
         experiences: [
             {
                 year: "2025",
+                role: "Music & Podcast Database",
+                company: "Academic Completed",
+                description:
+                    "SQL Server database project for a digital music and podcast platform, focused on relational " +
+                    "modeling, documentation, views, stored procedures, triggers, data validation and structured " +
+                    "database implementation.",
+
+                modalDescription:
+                    "Academic SQL Server database project for a digital music and podcast platform. The project " +
+                    "focused on requirements analysis, relational modeling, normalization, table creation, data " +
+                    "insertion, views, stored procedures, triggers, validation queries and technical documentation. " +
+                    "Although it was not a full web application, it shows database design, SQL logic, debugging, " +
+                    "code cleanup and structured implementation work.",
+
+                responsibilities: `
+☉ Participated in the full database design and implementation process.
+☉ Created and maintained SQL Server tables, relationships and constraints.
+☉ Developed views, stored procedures, functions and triggers.
+☉ Supported normalization, relational modeling and data consistency decisions.
+☉ Reviewed, cleaned and refactored SQL scripts to keep the project executable.
+☉ Fixed broken queries, structural issues and execution errors.
+☉ Prepared validation queries to confirm database behavior and expected results.
+☉ Organized technical documentation, diagrams and project explanations.
+☉ Helped structure the repository for clearer presentation and maintainability.
+☉ Supported final execution, review and delivery of the academic database project.
+`,
+
+                tags: ["Academic", "Completed", "Database"],
+
+                skills: [
+                    "SQL Server",
+                    "T-SQL",
+                    "Database Design",
+                    "Stored Procedures",
+                    "Documentation",
+                ],
+
+                modalSkills: [
+                    "SQL Server",
+                    "T-SQL",
+                    "Database Design",
+                    "Normalization",
+                    "Stored Procedures",
+                    "Triggers",
+                    "Views",
+                    "Data Validation",
+                    "Debugging",
+                    "Technical Documentation",
+                ],
+
+                links: [
+                    {
+                        label: "GitHub",
+                        href: "https://github.com/BetoxPrograming/music-podcast-database-sqlserver",
+                    },
+                ],
+            },
+            {
+                year: "2025",
                 role: "Waste Management Platform",
                 company: "Academic Completed",
                 description:
