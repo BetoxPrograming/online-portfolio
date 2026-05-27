@@ -155,6 +155,70 @@ const content = {
                 ],
             },
             {
+                year: "2024",
+                role: "Ubuntu Server Security Lab",
+                company: "Academic Completed",
+
+                description:
+                    "Academic security project focused on Ubuntu Server hardening, network analysis, " +
+                    "system protection and infrastructure documentation using practical security tools " +
+                    "and validation workflows.",
+
+                modalDescription:
+                    "Academic infrastructure and security project focused on Ubuntu Server hardening and " +
+                    "security improvement practices. The project covered vulnerability analysis, network " +
+                    "inspection, firewall configuration, system updates, access control and documentation. " +
+                    "Although oriented to learning and presentation, it provided practical exposure to " +
+                    "Linux administration, security tooling, technical documentation and validation workflows.",
+
+                responsibilities: `
+☉ Configured and validated Ubuntu Server security settings and hardening practices.
+☉ Worked with network inspection and security analysis tools.
+☉ Applied firewall and access control configurations.
+☉ Evaluated system updates and security improvement workflows.
+☉ Performed practical validation and troubleshooting tasks.
+☉ Organized technical documentation and learning notes.
+☉ Structured project artifacts and repository contents.
+☉ Supported configuration review and correction activities.
+☉ Documented setup processes and technical decisions.
+☉ Presented project findings and security concepts.
+`,
+
+                tags: [
+                    "Academic",
+                    "Completed",
+                    "Security",
+                ],
+
+                skills: [
+                    "Ubuntu Server",
+                    "Security",
+                    "Networking",
+                    "Documentation",
+                    "Troubleshooting",
+                ],
+
+                modalSkills: [
+                    "Ubuntu Server",
+                    "Linux",
+                    "Security",
+                    "Networking",
+                    "Firewall",
+                    "Hardening",
+                    "System Validation",
+                    "Troubleshooting",
+                    "Documentation",
+                    "Technical Analysis",
+                ],
+
+                links: [
+                    {
+                        label: "GitHub",
+                        href: "https://github.com/BetoxPrograming/ubuntu-server-security-lab",
+                    },
+                ],
+            },
+            {
                 year: "2020 — 2021",
                 role: "IziRig / IziRig Suite",
                 company: "Final Graduation Project",
